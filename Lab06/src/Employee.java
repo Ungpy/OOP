@@ -6,13 +6,21 @@ public class Employee {
     private int energy;
     
     public boolean equals(Employee e){
-        
+        return this.name.equals(e.getName());
     }
     public String toString(){
-        
+        return ("My name is " + this.name + ". \nI have " + this.energy + " energy left.\nI have a balance of " + this.wallet.getBalance() + " baht.");
     }
     public boolean buyFood(Seller s){
+        Food myFood = s.sell(this);
         
+        if(myFood != null){
+            this.eat(myFood);
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     public void eat(Food f){
         this.energy += f.getEnergy();

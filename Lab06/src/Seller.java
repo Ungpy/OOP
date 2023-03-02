@@ -7,5 +7,9 @@ public class Seller extends Employee{
             e.getWallet().setBalance(e.getWallet().getBalance() - food.getPrice());
             return food;
         }
+        else{
+            System.out.println("Your money is not enough.");
+            return null;
+        }
     }
 }

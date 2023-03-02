@@ -6,10 +6,10 @@ public class Food {
     public static void setPrice(double price){
         Food.price = price;
     }
-    public double getPrice(){
+    public static double getPrice(){
         return Food.price;
     }
-    public int getEnergy(){
+    public static int getEnergy(){
         return Food.energy;
     }
 }
