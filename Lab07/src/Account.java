@@ -22,7 +22,7 @@ public class Account {
         if(a > 0){
             if(this.balance >= a){
                 this.balance -= a;
-                System.out.println(a + " baht is withdrawn from " + this.name);
+                System.out.println(a + " baht is withdrawn from " + this.name + ".");
             }
             else{
                 System.out.println("Not enough money!");
