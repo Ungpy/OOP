@@ -1,0 +1,52 @@
+import java.awt.*;
+import javax.swing.*;
+public class CalculatorTwoGUI {
+    private JFrame fr;
+    private JPanel p_Button;
+    private JButton zero,one,two,three,four,five,six,seven,eight,nine,del,equal,plus,minus,multiply,divine;
+    private JTextField tf;
+    public CalculatorTwoGUI(){
+        fr = new JFrame("CalculatorTwoGUI");
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        p_Button = new JPanel();
+        p_Button.setLayout(new GridLayout(4,4));
+        zero = new JButton("0");
+        one = new JButton("1");
+        two = new JButton("2");
+        three = new JButton("3");
+        four = new JButton("4");
+        five = new JButton("5");
+        six = new JButton("6");
+        seven = new JButton("7");
+        eight = new JButton("8");
+        nine = new JButton("9");
+        del = new JButton("c");
+        equal = new JButton("=");
+        plus = new JButton("+");
+        minus = new JButton("-");
+        multiply = new JButton("x");
+        divine = new JButton("/");
+        tf = new JTextField();
+        p_Button.add(seven);
+        p_Button.add(eight);
+        p_Button.add(nine);
+        p_Button.add(plus);
+        p_Button.add(four);
+        p_Button.add(five);
+        p_Button.add(six);
+        p_Button.add(minus);
+        p_Button.add(one);
+        p_Button.add(two);
+        p_Button.add(three);
+        p_Button.add(multiply);
+        p_Button.add(zero);
+        p_Button.add(del);
+        p_Button.add(equal);
+        p_Button.add(divine);
+        fr.setLayout(new BorderLayout());
+        fr.add(tf, BorderLayout.NORTH);
+        fr.add(p_Button, BorderLayout.CENTER);
+        fr.setSize(200,200);
+        fr.setVisible(true);
+    }
+}
