@@ -73,6 +73,8 @@ public class StudentView implements ActionListener, WindowListener{
             System.out.println("ID: "+st.getID() +"money: "+ st.getMoney() + "Name: "+st.getName());
         }catch(IOException e){
             e.printStackTrace();
+        }catch(NullPointerException e3){
+            System.exit(0);
         }
     }
     public void windowOpened(WindowEvent we){
@@ -87,9 +89,11 @@ public class StudentView implements ActionListener, WindowListener{
                 e.printStackTrace();
             }catch(ClassNotFoundException c){
                 c.printStackTrace();
+            }catch(NullPointerException e3){
+                System.out.println("No student data found");
             }
         }else{
-            System.exit(0);
+            //System.exit(0);
         }
     }
     public void windowDeactivated(WindowEvent we){}
